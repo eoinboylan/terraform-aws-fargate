@@ -101,10 +101,3 @@ output "cloudwatch_log_group_retention_days" {
   description = "List of Retention in Days configuration of Cloudwatch Log Groups"
   value       = aws_cloudwatch_log_group.this.*.retention_in_days
 }
-
-# CODEPIPELINE SNS EVENTS
-
-output "codepipeline_events_sns_arn" {
-  description = "ARN of CodePipeline's SNS Topic"
-  value       = var.codepipeline_events_enabled ? join(",", aws_sns_topic.codepipeline_events.*.arn) : "not set"
-}

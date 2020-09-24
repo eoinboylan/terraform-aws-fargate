@@ -25,3 +25,4 @@ nbproject
 *.atom-*
 .tern-*
 jsconfig.json
+.vscode

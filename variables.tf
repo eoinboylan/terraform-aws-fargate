@@ -83,9 +83,3 @@ variable "alb_default_health_check_interval" {
 variable "alb_default_health_check_path" {
   default = "/"
 }
-
-## CODEPIPELINE SNS EVENTS varialbes
-
-variable "codepipeline_events_enabled" {
-  default = false
-}
