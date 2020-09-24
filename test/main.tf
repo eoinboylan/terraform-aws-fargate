@@ -4,13 +4,14 @@ terraform {
 
 provider "aws" {
   version = "~> 2.12.0"
-  profile = "test"
+  profile = "ev-prod-mumbai"
+  region  = "us-east-1"
 }
 
 variable "name" {}
 
 module "fargate" {
-  source = "../fargate-module"
+  source = "../"
 
   vpc_create_nat = false
 
@@ -30,6 +31,4 @@ module "fargate" {
       logs_retention_days      = 14
     }
   }
-
-  codepipeline_events_enabled = true
 }
